@@ -17,5 +17,23 @@
 <body>
     <h1>👋 你好！这是我的第一个网站</h1>
     <p>我正在学习使用 GitHub 建立属于自己的网页。</p>
+    <!-- 音乐播放器部件 -->
+<div style="margin-top: 30px;">
+    <p>🎵 背景音乐：</p>
+    <audio id="bgMusic" controls loop>
+        <source src="music.mp3" type="audio/mpeg">
+        您的浏览器不支持播放音频。
+    </audio>
+</div>
+
+<!-- 点击页面解锁自动播放的代码 -->
+<script>
+    window.addEventListener('click', function() {
+        var audio = document.getElementById('bgMusic');
+        if (audio.paused) {
+            audio.play();
+        }
+    }, { once: true });
+</script>
 </body>
 <html>
